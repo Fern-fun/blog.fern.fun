@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ .Title }} | {{ .Site.Title }}</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <header>
+            <logo>
+                <h1>{{ .Site.Title }}</h1>
+            </logo>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="/">Strona Główna</a></li>
+                {{ range .Site.Sections}}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                {{ range .Site.RegularPages }}
+                {{ if not .Parent.Parent }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                {{ end }}
+            </ul>
+        </nav>
+
+        <div class="container">
+            <aside>
+                <section class="card">
+                    <p class="card__title">Najnowsze wpisy</p>
+
+                    <ul>
+                        {{ range .Site.RegularPages }}
+                        {{ if .Parent.Parent }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <p class="card__title">Najpopularniejsze tagi</p>
+
+                    <ul>
+                        {{ range .Site.Taxonomies.tags }}
+                        <li><a href="/tags/{{ .Pages }}">{{ .Page }}</a></li>
+                        {{ end }}
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <p class="card__title">Nasze projekty</p>
+
+                    <ul>
+                        <li>Projekt 1</li>
+                        <li>Projekt 2</li>
+                        <li>Projekt 3</li>
+                        <li>Projekt 4</li>
+                        <li>Projekt 5</li>
+                    </ul>
+                </section>
+            </aside>
+            <main>
+                {{ block "main" . }}{{ end }}
+            </main>
+        </div>
+
+    </body>
+</html>
