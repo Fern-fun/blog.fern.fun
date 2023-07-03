@@ -1,0 +1,35 @@
+# baseURL = 'http://example.com/'
+languageCode: pl-pl
+theme: fern-tui
+
+copyright: Everything is mine
+defaultContentLanguage: en
+
+languages:
+    en:
+        title: Fern.Fun Blog
+        languageName: English
+        weight: 2
+        languageCode: en-us
+        permalinks:
+            page: 
+                dziennik: /journal/:year/:month/:slug/
+                poradniki: /tutorials/:slug/
+            section:
+                dziennik: /journal/
+                poradniki: /tutorials/
+
+    pl:
+        title: Blog Fern.Fun 
+        languageName: Polski
+        weight: 2
+        languageCode: pl-pl
+        permalinks:
+            page: 
+                dziennik: /dziennik/:year/:month/:slug/
+                poradniki: /poradniki/:slug/
+            section:
+                dziennik: /dziennik/
+                poradniki: /poradniki/
+
+

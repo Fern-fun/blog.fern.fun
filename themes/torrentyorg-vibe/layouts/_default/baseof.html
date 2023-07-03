@@ -46,7 +46,7 @@
 
                     <ul>
                         {{ range .Site.Taxonomies.tags }}
-                        <li><a href="/tags/{{ .Pages }}">{{ .Page }}</a></li>
+                        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Pages | len }})</a></li>
                         {{ end }}
                     </ul>
                 </section>

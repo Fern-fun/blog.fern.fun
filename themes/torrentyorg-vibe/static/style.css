@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282828;
+  color: white;
+  margin: 0;
+  padding: 0;
+
+  --site-width: 1000px;
+  --aside-width: 300px;
+
+  --accent-light: #63c061;
+  --accent-dark: #57ad55;
+
+  font-family: 'Fira Code', monospace;
+}
+
+header {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+nav {
+  background: -webkit-linear-gradient(var(--accent-light), var(--accent-dark));
+  padding: 0.25em 0em;
+  margin: 2em 0;
+}
+
+nav ul {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+nav li:not(:first-child)::before {
+  content: "\2022";
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav li:first-child a {
+  margin-left: 0;
+}
+
+.container {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  gap: 1em;
+}
+
+aside {
+  width: var(--aside-width);
+}
+
+.card {
+  background: #383838;
+  border: 1px solid #000;
+  margin-bottom: 1em;
+}
+
+.card a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__title {
+  background: linear-gradient(
+    to bottom,
+    var(--accent-light),
+    var(--accent-dark)
+  );
+  margin: 0;
+  padding: 0.25em 0.5em;
+}
+
+main {
+  width: 100%;
+  background: #383838;
+  border: 1px solid #000;
+  padding: 1em;
+}
+
+a {
+  color: rgb(85, 144, 163);
+}

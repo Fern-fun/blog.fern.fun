@@ -1,0 +1,225 @@
+/* https://github.com/morhetz/gruvbox */
+$bg: #282828;
+$bg1: #3c3836;
+$fg: #ebdbb2;
+$fg4: #a89984;
+
+$blue: #83a598;
+$blue-dim: #458588;
+$green: #b8bb26;
+$yellow: #fabd2f;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bg;
+    color: $fg;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content {
+    line-height: 1.6;
+    margin-bottom: 10rem;
+
+    p {
+        margin: 1rem 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+        margin: 2rem 0;
+    }
+
+    a {
+        color: $blue;
+        text-decoration: underline;
+
+        &:hover{
+            color: $blue-dim;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin: 1rem 0;
+
+    &__links {
+        a {
+            color: $fg;
+
+            padding: 0.5rem;
+            text-decoration: underline;
+            
+            &:first-child {
+                text-decoration: none;
+                background-color: $green;
+                color: $bg1;
+            }
+        
+        }
+
+        &-dropdown {
+            display: none;
+        }
+
+        &-toggle-dropdown {
+            display: none;
+        }
+    }
+
+    &__langs {
+        color: red;
+    }
+
+    &__lang {
+        color: $fg;
+
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        text-decoration: underline;
+
+        &--active {
+            cursor: pointer;
+            text-decoration: none;
+            background-color: $green;
+            color: $bg1;
+        }
+    }
+}
+
+code {
+    color: $fg4;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    
+}
+
+.ls {
+    .ls__command {
+        color: $fg4;
+    }
+
+    .ls__prompt {
+        color: $bg1;
+        background: $green;
+    }
+
+    a {
+        //display: block;
+    }
+}
+
+.ls-bak {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            color: $fg;
+            text-decoration: underline;
+            margin: 0.5rem;
+            padding: 0.5rem;
+        }
+    }
+}
+
+li {
+    margin-left: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding-top: 0;
+        position: relative;
+
+        &-toggle-dropdown {
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: calc(50% - 10px);
+            left: 65%;
+            cursor: pointer;
+            // display: none;
+            // visibility: hidden;
+        }
+        
+        &>:not(:nth-child(2), input) {
+            display: none;
+        }
+
+        &>:first-child {
+            margin-bottom: 1rem;
+
+        }
+
+        &__links {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &>:not(:first-child, span, input) {
+                display: none;
+            }
+         
+            // &-dropdown {
+            //     display: block;
+            //     position: absolute;
+            //     top: 8px;
+            //     right: -1rem;
+            // }
+
+            &-toggle-dropdown {
+                display: block;
+                position: absolute;
+                top: 8px;
+                right: -1rem;
+                cursor: pointer;
+            }
+
+        
+
+
+        }
+
+        &__langs {
+            margin-top: 2rem;
+        }
+
+        
+        &-toggle-dropdown:checked ~ div, &-toggle-dropdown:checked ~ div > a  {
+            display: block;
+        }
+    }
+
+    
+}

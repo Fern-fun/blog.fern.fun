@@ -1,6 +1,0 @@
-# baseURL = 'http://example.com/'
-languageCode = 'pl-pl'
-title = 'Hugo Fern.Fun'
-
-[permalinks]
-dziennik = '/dziennik/:year/:month/:slug/'

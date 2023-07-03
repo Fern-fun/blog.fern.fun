@@ -1,0 +1,27 @@
+<nav class="nav">
+    <input type="checkbox" class="nav-toggle-dropdown">
+
+    <div class="nav__links">
+        <a href="{{ .Site.Home.Permalink }}">[Fern OS] $</a>
+
+        {{ range .Site.Sections}}
+            <a href="{{ .Permalink }}" class="nav__links-site_title">./{{ .Title }}</a>
+        {{ end }}
+
+        {{ range .Site.RegularPages }}
+            {{ if not .Parent.Parent }}
+                <a href="{{ .Permalink }}">./{{ .Title }}</a>
+
+            {{ end }}
+        {{ end }}
+    </div>
+    <!-- <span class="nav__links-dropdown">v</span> -->
+
+    <div class="nav__langs">
+        {{ range .Translations }}
+            <a class="nav__lang" href="{{ .Permalink }}">{{ .Language }}</a>
+        {{ end }}
+
+        <a class="nav__lang nav__lang--active">{{ .Language }}</a>
+    </div>
+</nav> 
