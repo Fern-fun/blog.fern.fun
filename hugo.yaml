@@ -1,9 +1,13 @@
 # baseURL = 'http://example.com/'
-languageCode: pl-pl
 theme: fern-tui
 
 copyright: Everything is mine
 defaultContentLanguage: en
+
+taxonomies:
+    tag: tags # default
+    category: categories # default
+    author: authors
 
 languages:
     en:
@@ -18,6 +22,12 @@ languages:
             section:
                 dziennik: /journal/
                 poradniki: /tutorials/
+            taxonomy:
+                tags: /tags/
+                authors: /authors/
+            term:
+                tags: /tag/:slug/
+                authors: /author/:slug/
 
     pl:
         title: Blog Fern.Fun 
@@ -31,5 +41,12 @@ languages:
             section:
                 dziennik: /dziennik/
                 poradniki: /poradniki/
+            taxonomy:
+                tags: /tagi/
+                authors: /autorzy/
+            term:
+                tags: /tag/:slug/
+                authors: /autor/:slug/
+
 
 
