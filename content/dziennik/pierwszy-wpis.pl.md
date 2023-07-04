@@ -1,6 +1,7 @@
 ---
 title: "Pierwszy Wpis"
 date: 2023-06-30T18:28:38+02:00
+tags: ["historia"]
 ---
 
 ## Witajcie w naszym nowym blogu dla pasjonatów programowania!

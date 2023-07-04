@@ -1,3 +1,6 @@
-author:
+authors:
   one: Author
   other: Authors
+tags:
+  one: Tag
+  other: Tags

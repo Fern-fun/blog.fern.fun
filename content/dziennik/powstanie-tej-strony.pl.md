@@ -1,6 +1,7 @@
 ---
 title: "Powstanie Tej Strony"
 date: 2023-06-30T18:29:03+02:00
+tags: ["historia", "techniczne"]
 ---
 
 Witajcie, drodzy czytelnicy! Dzisiaj chcemy podzielić się z Wami historią powstania tej strony i zdradzić Wam sekret, którym się posłużyliśmy. Nasza grupa programistów postanowiła wybrać framework do tworzenia bloga, który zapewni nam wydajne i elastyczne narzędzia, aby móc skupić się na treści, nie tracąc czasu na konfigurację i skomplikowane rozwiązania. I tak, oto pojawia się na scenie Hugo!

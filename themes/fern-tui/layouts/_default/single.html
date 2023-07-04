@@ -2,17 +2,8 @@
 
 <div>
     <div>Data: {{ .Date | time.Format "02 Jan 2006" }}</div>
-    <div>
-        {{ $stringname := "author" }}
-        {{ $terms := .GetTerms "authors" }}
-        {{ $count := len $terms }}
-        {{ if gt $count 0 }}
-            {{ i18n $stringname $count }}:
-
-            {{ range $index, $author := $terms }}{{ if $index }}, {{ end }}
-            <a href="{{ $author.Permalink }}">{{ $author.LinkTitle }}</a>{{ end }}
-        {{ end }}
-    </div>
+    {{ partial "terms.html" (dict "Page" . "TaxName" "authors") }}
+    {{ partial "terms.html" (dict "Page" . "TaxName" "tags") }}
 </div>
 
 <h1>{{ .Title }}</h1>

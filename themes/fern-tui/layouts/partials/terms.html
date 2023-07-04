@@ -1,0 +1,8 @@
+<div>
+    {{ $terms := .Page.GetTerms .TaxName }}
+    {{ if gt (len $terms) 0 }}
+        {{ i18n .TaxName (len $terms) }}:
+        {{ range $index, $term := $terms }}{{ if $index }}, {{ end }}
+        <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>{{ end }}
+    {{ end }}
+</div>
