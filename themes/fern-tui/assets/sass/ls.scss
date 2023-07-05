@@ -1,0 +1,19 @@
+.ls {
+    .ls__command {
+        color: $fg4;
+    }
+
+    .ls__prompt {
+        color: $bg1;
+        background: $green;
+        padding: .2rem;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .ls {
+        .ls__line {
+            margin: 0.5rem 0;
+        }
+    }
+}
