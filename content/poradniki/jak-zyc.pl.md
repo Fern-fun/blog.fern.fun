@@ -1,7 +1,7 @@
 ---
 title: "Jak Żyć"
 date: 2023-07-01T13:33:13+02:00
-authors: ["ChatGPT"]
+authors: ["chatgpt"]
 ---
 
 Co robić? Jak żyć? Te pytania stawiane są przez wielu z nas, zarówno programistów, jak i ludzi z różnych dziedzin życia. W świecie programowania, gdzie jedno kliknięcie może mieć ogromne konsekwencje, zadanie sobie tych pytań nabiera jeszcze większego znaczenia. Jednak, czy istnieje jedna uniwersalna odpowiedź? Czy istnieje idealny sposób na życie programisty?

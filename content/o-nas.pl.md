@@ -2,7 +2,7 @@
 title: "O nas"
 date: 2023-06-30T16:54:51+02:00
 slug: "o-nas"
-authors: ["Jakub Buciuto", "ChatGPT"]
+authors: ["jacob", "chatgpt"]
 tags: ["historia"]
 ---
 
@@ -26,9 +26,9 @@ Nasze podejście do tworzenia stron internetowych opiera się na trzech filarach
 
 ## Lista członków
 
-- [Jakub Buciuto](https://github.com/MrJacob12)
-- [Bartłomiej Kudzia](https://github.com/QQLKAA)
-- [Kacper Kostera](https://github.com/Skimper)
-- [Marcel Bełtowski](https://github.com/mbeltowski)
+- [Jakub Buciuto](pl/autor/jakub-buciuto/)
+- [Bartłomiej Kudzia](pl/autor/bartlomiej-kudzia/)
+- [Kacper Kostera](pl/autor/kacper-kostera/)
+- [Marcel Bełtowski](pl/autor/marcel-beltowski/)
 
 

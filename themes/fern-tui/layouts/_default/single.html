@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div>
-    <div>Data: {{ .Date | time.Format "02 Jan 2006" }}</div>
+    <div>{{ i18n "date" }}: {{ .Date | time.Format "02 Jan 2006" }}</div>
     {{ partial "terms.html" (dict "Page" . "TaxName" "authors") }}
     {{ partial "terms.html" (dict "Page" . "TaxName" "tags") }}
 </div>

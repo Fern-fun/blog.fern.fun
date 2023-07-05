@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="avatar">
+{{ if and .Params.avatar .Params.title }}
+    <img alt="avatar" src="{{ .Params.avatar }}" />
+    <h1>{{ .Params.title }}</h1>
+{{end}}
+</div>
+{{ .Content }}
+
+<div class="socials">
+{{ if .Params.linkedin }}
+    <a href="{{ .Params.linkedin }}" target="_blank"><img alt="linkedin" src="/linkedin.png" /></a>
+{{ end }}
+
+{{ if .Params.github }}
+    <a href="{{ .Params.github }}" target="_blank"><img alt="github" src="/github.svg" /></a>
+{{ end }}
+</div> 
+{{ end }}

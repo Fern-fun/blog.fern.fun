@@ -20,6 +20,27 @@ body{
     color: $fg;
     font-family: monospace;
     font-size: 1rem;
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($color: $green, $alpha: .5);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($color: $green, $alpha: 1.0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color: $green, $alpha: .6);
 }
 
 .container {
@@ -49,59 +70,45 @@ body{
             color: $blue-dim;
         }
     }
-}
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
+    img{
+        width: 50%;
 
-    padding: 1rem 0;
-    margin: 1rem 0;
+        @media screen and (max-width: 605px) {
+            width: 80%;
+        }
+    }
 
-    &__links {
+    .avatar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        img{
+            width: 128px;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+    }
+
+    .socials{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem;
+        margin-top: 5rem;
+
         a {
-            color: $fg;
-
-            padding: 0.5rem;
-            text-decoration: underline;
-            
-            &:first-child {
-                text-decoration: none;
-                background-color: $green;
-                color: $bg1;
-            }
-        
+            margin: 0 0.5rem;
         }
 
-        &-dropdown {
-            display: none;
-        }
-
-        &-toggle-dropdown {
-            display: none;
+        img{
+            width: 32px;
         }
     }
-
-    &__langs {
-        color: red;
-    }
-
-    &__lang {
-        color: $fg;
-
-        padding: 0.5rem;
-        margin: 0 0.5rem;
-        text-decoration: underline;
-
-        &--active {
-            cursor: pointer;
-            text-decoration: none;
-            background-color: $green;
-            color: $bg1;
-        }
-    }
+    
 }
 
 code {
@@ -119,6 +126,7 @@ code {
     .ls__prompt {
         color: $bg1;
         background: $green;
+        padding: .2rem;
     }
 
     a {
@@ -151,75 +159,126 @@ li {
     margin-left: 2rem;
 }
 
+.nav {
+    display: flex;
+    padding: 1rem 0;
+    margin: 1rem 0;
+
+    #toggle-menu {
+        display: none;
+    }
+
+    &__title {
+        padding: 0.5rem;
+        margin-right: 1rem;
+        text-decoration: none;
+        background-color: $green;
+        color: $bg1;
+    }
+
+    &__menu-toggle {
+        display: none;
+    }
+
+    &__link {
+        color: $fg;
+
+        padding: 0.5rem;
+        text-decoration: underline;
+    }
+
+    &__langs {
+        margin-left: auto;
+    }
+
+    &__lang {
+        color: $fg;
+
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        text-decoration: underline;
+
+        &--active {
+            cursor: pointer;
+            text-decoration: none;
+            background-color: $green;
+            color: $bg1;
+        }
+    }
+}
 
 @media only screen and (max-width: 600px) {
-    .nav {
-        flex-direction: column;
-        justify-content: flex-start;
-        margin-top: 0;
-        padding-top: 0;
-        position: relative;
+    .mobile-hide {
+        display: none;
+    }
 
-        &-toggle-dropdown {
-            display: block;
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: calc(50% - 10px);
-            left: 65%;
-            cursor: pointer;
-            // display: none;
-            // visibility: hidden;
-        }
-        
-        &>:not(:nth-child(2), input) {
-            display: none;
-        }
-
-        &>:first-child {
-            margin-bottom: 1rem;
-
-        }
-
-        &__links {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-
-            &>:not(:first-child, span, input) {
-                display: none;
-            }
-         
-            // &-dropdown {
-            //     display: block;
-            //     position: absolute;
-            //     top: 8px;
-            //     right: -1rem;
-            // }
-
-            &-toggle-dropdown {
-                display: block;
-                position: absolute;
-                top: 8px;
-                right: -1rem;
-                cursor: pointer;
-            }
-
-        
-
-
-        }
-
-        &__langs {
-            margin-top: 2rem;
-        }
-
-        
-        &-toggle-dropdown:checked ~ div, &-toggle-dropdown:checked ~ div > a  {
-            display: block;
+    .content {
+        a {
+            padding: 0.5rem 0;
+            margin: 0.5rem 0;
         }
     }
 
+    .ls {
+        .ls__line {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            
+        }
+    }
+
+    .nav {
+        flex-direction: column;
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__menu-toggle {
+            display: block;
+            cursor: pointer;
+        }
+
+        &__hamburger-bar-1, &__hamburger-bar-2, &__hamburger-bar-3 {
+            width: 35px;
+            height: 5px;
+            background-color: $fg;
+            margin: 6px 0;
+            transition: 0.3s;
+            border-radius: 100px;
+        }
+
+        #toggle-menu:not(:checked) ~ .nav__links, #toggle-menu:not(:checked) ~ .nav__langs {
+            display:none;
+        }
+
+        #toggle-menu:checked ~ &__buttons {
+            .nav__hamburger-bar-1 {
+                transform: translate(0, 11px) rotate(-45deg);
+            }
+
+            .nav__hamburger-bar-2 {
+                opacity: 0;
+            }
+
+            .nav__hamburger-bar-3 {
+                transform: translate(0, -11px) rotate(45deg);
+            }
+        }
+
+        &__links {
+            padding: 1rem 0;
+        }
+
+        &__link {
+            display: block;
+        }
+
+    }
     
 }
+
+

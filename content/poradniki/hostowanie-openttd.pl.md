@@ -2,7 +2,7 @@
 title: "Hostowanie OpenTTD"
 date: 2023-06-30T18:29:39+02:00
 tags: ["linux", "openttd", "gry", "hostowanie", "techniczne"]
-authors: ["Bartłomiej Kudzia"]
+authors: ["bartek"]
 ---
 
 ## Instalacja OpenTTD

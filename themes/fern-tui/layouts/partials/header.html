@@ -1,27 +1,35 @@
 <nav class="nav">
-    <input type="checkbox" class="nav-toggle-dropdown">
+    <input type="checkbox" id="toggle-menu" />
 
-    <div class="nav__links">
-        <a href="{{ .Site.Home.Permalink }}">[Fern OS] $</a>
-
-        {{ range .Site.Sections}}
-            <a href="{{ .Permalink }}" class="nav__links-site_title">./{{ .Title }}</a>
-        {{ end }}
-
-        {{ range .Site.RegularPages }}
-            {{ if not .Parent.Parent }}
-                <a href="{{ .Permalink }}">./{{ .Title }}</a>
-
-            {{ end }}
-        {{ end }}
+    <div class="nav__buttons">
+        <a href="{{ .Site.Home.Permalink }}" class="nav__title">[Fern OS] $</a>
+        <label class="nav__menu-toggle" for="toggle-menu" >
+            <div class="nav__hamburger-bar-1"></div> 
+            <div class="nav__hamburger-bar-2"></div> 
+            <div class="nav__hamburger-bar-3"></div> 
+        </label>
     </div>
-    <!-- <span class="nav__links-dropdown">v</span> -->
+    
+    <div class="nav__links">
+
+
+            {{ range .Site.Sections}}
+                <a href="{{ .Permalink }}" class="nav__link">./{{ .Title }}</a>
+            {{ end }}
+    
+            {{ range .Site.RegularPages }}
+                {{ if not .Parent.Parent }}
+                    <a href="{{ .Permalink }}" class="nav__link">./{{ .Title }}</a>
+    
+                {{ end }}
+            {{ end }}
+    </div>
 
     <div class="nav__langs">
         {{ range .Translations }}
             <a class="nav__lang" href="{{ .Permalink }}">{{ .Language }}</a>
         {{ end }}
 
-        <a class="nav__lang nav__lang--active">{{ .Language }}</a>
+        <span class="nav__lang nav__lang--active">{{ .Language }}</span>
     </div>
 </nav> 

@@ -1,7 +1,7 @@
 ---
 title: "OpenTTD hosting"
 date: 2023-06-30T18:29:39+02:00
-tags: ["linux", "openttd", "gry", "hostowanie", "techniczne"]
+tags: ["linux", "openttd", "games", "hosting", "technical"]
 authors: ["Bartłomiej Kudzia"]
 ---
 
