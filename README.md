@@ -1,4 +1,4 @@
-## Przydatne komendy
+## Useful commands
 
-- `hugo` - generuje statyczną stronę w folderze `public`
-- `hugo server -D --noHTTPCache` - odpala serwer deweloperski
+- hugo - generates a static site in the public folder
+- hugo server -D --noHTTPCache - starts the development server
