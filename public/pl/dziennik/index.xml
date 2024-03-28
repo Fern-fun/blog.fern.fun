@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dziennik on Blog Fern.Fun</title>
+    <link>/pl/dziennik/</link>
+    <description>Recent content in Dziennik on Blog Fern.Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-pl</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Fri, 30 Jun 2023 18:57:56 +0200</lastBuildDate><atom:link href="/pl/dziennik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powstanie Tej Strony</title>
+      <link>/pl/dziennik/2023/06/powstanie-tej-strony/</link>
+      <pubDate>Fri, 30 Jun 2023 18:29:03 +0200</pubDate>
+      
+      <guid>/pl/dziennik/2023/06/powstanie-tej-strony/</guid>
+      <description>Witajcie, drodzy czytelnicy! Dzisiaj chcemy podzielić się z Wami historią powstania tej strony i zdradzić Wam sekret, którym się posłużyliśmy. Nasza grupa programistów postanowiła wybrać framework do tworzenia bloga, który zapewni nam wydajne i elastyczne narzędzia, aby móc skupić się na treści, nie tracąc czasu na konfigurację i skomplikowane rozwiązania. I tak, oto pojawia się na scenie Hugo!
+Hugo to wyjątkowy framework do generowania statycznych stron internetowych. Jego główne zalety to prostota obsługi i niezwykła szybkość generowania stron.</description>
+    </item>
+    
+    <item>
+      <title>Pierwszy Wpis</title>
+      <link>/pl/dziennik/2023/06/pierwszy-wpis/</link>
+      <pubDate>Fri, 30 Jun 2023 18:28:38 +0200</pubDate>
+      
+      <guid>/pl/dziennik/2023/06/pierwszy-wpis/</guid>
+      <description>Witajcie w naszym nowym blogu dla pasjonatów programowania! Cześć i serdecznie witamy Was na naszej platformie, stworzonej specjalnie dla programistów z całego świata! Jesteśmy grupą entuzjastów kodowania, którzy postanowili stworzyć to miejsce, aby dzielić się naszą wiedzą, doświadczeniami i inspiracjami. Jeśli kochasz pisanie linii kodu, rozwiązując skomplikowane problemy i eksplorując nowe technologie, jesteś we właściwym miejscu!
+Co nas wyróżnia? Jesteśmy przekonani, że programowanie to nie tylko zawód, ale również nieustająca pasja.</description>
+    </item>
+    
+  </channel>
+</rss>

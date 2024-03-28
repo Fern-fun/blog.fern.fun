@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fern.Fun Blog</title>
+    <link>/</link>
+    <description>Recent content on Fern.Fun Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Wed, 05 Jul 2023 18:00:00 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Creation of This Website</title>
+      <link>/journal/2023/07/the-creation-of-this-website/</link>
+      <pubDate>Wed, 05 Jul 2023 18:00:00 +0200</pubDate>
+      
+      <guid>/journal/2023/07/the-creation-of-this-website/</guid>
+      <description>Hello, dear readers! Today, we want to share with you the story of how this website came to be and reveal the secret we used. Our group of programmers decided to choose a framework for building a blog that would provide us with efficient and flexible tools, allowing us to focus on content without wasting time on configuration and complex solutions. And thus, Hugo enters the stage!
+Hugo is an exceptional framework for generating static websites.</description>
+    </item>
+    
+    <item>
+      <title>OpenTTD hosting</title>
+      <link>/tutorials/openttd-hosting/</link>
+      <pubDate>Fri, 30 Jun 2023 18:29:39 +0200</pubDate>
+      
+      <guid>/tutorials/openttd-hosting/</guid>
+      <description>OpenTTD Installation # As root, from the /root directory curl -O https://cdn.openttd.org/openttd-releases/13.0/openttd-13.0-linux-generic-amd64.tar.xz curl -O https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip unzip opengfx-7.1-all.zip cd /opt tar xf /root/openttd-13.0-linux-generic-amd64.tar.xz mv openttd-13.0-linux-generic-amd64 openttd cp /root/opengfx-7.1.tar /opt/openttd/baseset User Creation OpenTTD stores add-ons, saves, etc. in the user&amp;rsquo;s folder, and running the server as the root user is not a good idea.
+useradd -m -d /srv/openttd -s /bin/bash openttd First Run During the first run, OpenTTD will generate the ~/.config/openttd and ~/.</description>
+    </item>
+    
+    <item>
+      <title>The First Entry</title>
+      <link>/journal/2023/06/the-first-entry/</link>
+      <pubDate>Fri, 30 Jun 2023 18:28:38 +0200</pubDate>
+      
+      <guid>/journal/2023/06/the-first-entry/</guid>
+      <description>Welcome to Our New Blog for Programming Enthusiasts! Hello and a warm welcome to our platform, specially created for programmers from all around the world! We are a group of coding enthusiasts who have decided to create this space to share our knowledge, experiences, and inspirations. If you love writing lines of code, solving complex problems, and exploring new technologies, you are in the right place!
+What Sets Us Apart? We believe that programming is not just a profession but also an enduring passion.</description>
+    </item>
+    
+    <item>
+      <title>About us</title>
+      <link>/about-us/</link>
+      <pubDate>Fri, 30 Jun 2023 16:54:51 +0200</pubDate>
+      
+      <guid>/about-us/</guid>
+      <description>Our team specializes in creating attractive websites. We are a group of developers who craft stunning online experiences that engage and inspire. Our passion lies in designing and developing websites that are not only aesthetically beautiful but also functional and user-friendly. We focus on modern solutions that capture the attention of visitors and leave a lasting impression. We strive to make our websites visually appealing while also catering to the needs of our clients and their target audience.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jakub Buciuto on Fern.Fun Blog</title>
+    <link>/author/jakub-buciuto/</link>
+    <description>Recent content in Jakub Buciuto on Fern.Fun Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Fri, 30 Jun 2023 16:54:51 +0200</lastBuildDate><atom:link href="/author/jakub-buciuto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About us</title>
+      <link>/about-us/</link>
+      <pubDate>Fri, 30 Jun 2023 16:54:51 +0200</pubDate>
+      
+      <guid>/about-us/</guid>
+      <description>Our team specializes in creating attractive websites. We are a group of developers who craft stunning online experiences that engage and inspire. Our passion lies in designing and developing websites that are not only aesthetically beautiful but also functional and user-friendly. We focus on modern solutions that capture the attention of visitors and leave a lasting impression. We strive to make our websites visually appealing while also catering to the needs of our clients and their target audience.</description>
+    </item>
+    
+  </channel>
+</rss>

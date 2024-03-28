@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+<meta name="description" content="Instalacja OpenTTD # Jako root, z katalogu /root curl -O https://cdn.openttd.org/openttd-releases/13.0/openttd-13.0-linux-generic-amd64.tar.xz curl -O https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip unzip opengfx-7.1-all.zip cd /opt tar xf /root/openttd-13.0-linux-generic-amd64.tar.xz mv openttd-13.0-linux-generic-amd64 openttd cp /root/opengfx-7.1.tar /opt/openttd/baseset Tworzenie użytkownika OpenTTD przechowuje dodatki, savey itp. w folderze użytkownika, a uruchamianie serwera jako użytkownik root nie jest dobrym pomysłem.
+useradd -m -d /srv/openttd -s /bin/bash openttd Pierwsze uruchomienie Przy pierwszym uruchomieniu OpenTTD wygeneruje foldery ~/.config/openttd i ~/.local/share/openttd
+su openttd /opt/openttd/openttd -D Po uruchomieniu odpaleniu serwera można od razu skonfigurować część ustawień">
+
+
+  <title>Hostowanie OpenTTD | Blog Fern.Fun</title>
+
+
+
+
+  <link rel="stylesheet" href="/css/style.min.0ea6c29e7f709a7d516d8048552056b372bf541f174c4325e1d3e76992e4b47d.css" integrity="sha256-DqbCnn9wmn1RbYBIVSBWs3K/VB8XTEMl4dPnaZLktH0=" crossorigin="anonymous">
+<body>
+        <div class="container"><nav class="nav">
+    <input type="checkbox" id="toggle-menu" />
+
+    <div class="nav__buttons">
+        <a href="/pl/" class="nav__title">[Fern OS] $</a>
+        <label class="nav__menu-toggle" for="toggle-menu" >
+            <div class="nav__hamburger-bar-1"></div> 
+            <div class="nav__hamburger-bar-2"></div> 
+            <div class="nav__hamburger-bar-3"></div> 
+        </label>
+    </div>
+    
+    <div class="nav__links">
+
+
+            
+                <a href="/pl/dziennik/" class="nav__link">./Dziennik</a>
+            
+                <a href="/pl/poradniki/" class="nav__link">./Poradniki</a>
+            
+    
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <a href="/pl/o-nas/" class="nav__link">./O nas</a>
+    
+                
+            
+    </div>
+
+    <div class="nav__langs">
+        
+            <a class="nav__lang" href="/tutorials/openttd-hosting/">en</a>
+        
+
+        <span class="nav__lang nav__lang--active">pl</span>
+    </div>
+</nav> <main class="content">
+
+<div>
+    <div>Data: 30 cze 2023</div>
+    <div>
+    
+    
+        Autor:
+        
+        <a href="/pl/autor/bartlomiej-kudzia/">Bartłomiej Kudzia</a>
+    
+</div>
+
+    <div>
+    
+    
+        Tagi:
+        
+        <a href="/pl/tag/linux/">linux</a>, 
+        <a href="/pl/tag/openttd/">openttd</a>, 
+        <a href="/pl/tag/gry/">gry</a>, 
+        <a href="/pl/tag/hostowanie/">hostowanie</a>, 
+        <a href="/pl/tag/techniczne/">techniczne</a>
+    
+</div>
+
+</div>
+
+<h1>Hostowanie OpenTTD</h1>
+
+<h2 id="instalacja-openttd">Instalacja OpenTTD</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Jako root, z katalogu /root</span>
+</span></span><span style="display:flex;"><span>curl -O https://cdn.openttd.org/openttd-releases/13.0/openttd-13.0-linux-generic-amd64.tar.xz
+</span></span><span style="display:flex;"><span>curl -O https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip
+</span></span><span style="display:flex;"><span>unzip opengfx-7.1-all.zip
+</span></span><span style="display:flex;"><span>cd /opt
+</span></span><span style="display:flex;"><span>tar xf /root/openttd-13.0-linux-generic-amd64.tar.xz
+</span></span><span style="display:flex;"><span>mv openttd-13.0-linux-generic-amd64 openttd
+</span></span><span style="display:flex;"><span>cp /root/opengfx-7.1.tar /opt/openttd/baseset
+</span></span></code></pre></div><h2 id="tworzenie-użytkownika">Tworzenie użytkownika</h2>
+<p>OpenTTD przechowuje dodatki, savey itp. w folderze użytkownika, a uruchamianie serwera jako użytkownik root nie jest dobrym pomysłem.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>useradd -m -d /srv/openttd -s /bin/bash openttd
+</span></span></code></pre></div><h2 id="pierwsze-uruchomienie">Pierwsze uruchomienie</h2>
+<p>Przy pierwszym uruchomieniu OpenTTD wygeneruje foldery <code>~/.config/openttd</code> i <code>~/.local/share/openttd</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su openttd
+</span></span><span style="display:flex;"><span>/opt/openttd/openttd -D
+</span></span></code></pre></div><p>Po uruchomieniu odpaleniu serwera można od razu skonfigurować część ustawień</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>server_name FernTTD
+</span></span><span style="display:flex;"><span>name FernTTD
+</span></span><span style="display:flex;"><span>rcon_pw j3b4cp1s
+</span></span><span style="display:flex;"><span>setting server_game_type public
+</span></span></code></pre></div><h2 id="instalacja-scenariusza-i-dodatków">Instalacja scenariusza i dodatków</h2>
+<p>Wrzuć plik <code>init.sav</code> do katalogu <code>/srv/openttd/.local/share/openttd/save</code>. Pamiętaj o zmianie uprawnień.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown openttd:openttd /srv/openttd/.local/share/openttd/save/init.sav
+</span></span></code></pre></div><p>Ten plik zawiera początkowy stan gry, należy go skopiować do nowego pliku. Upewnij się, że polecenia wykonujesz jako użytkownik <code>openttd</code>!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /srv/openttd/.local/share/openttd/save/init.sav /srv/openttd/.local/share/openttd/save/main.sav
+</span></span></code></pre></div><p>Wrzuć na serwer plik <code>newgrf.tar.xz</code> do katalogu <code>/srv/openttd</code> i rozpakuj do folderu <code>.local/share/openttd/newgrf</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/.local/share/openttd/newgrf
+</span></span><span style="display:flex;"><span>tar xvf ~/newgrf.tar.xz
+</span></span></code></pre></div><p>Teraz należy odpalić serwer i zainstalować potrzebne dodatki</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/opt/openttd/openttd -D
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rescan_newgrf
+</span></span><span style="display:flex;"><span>content update
+</span></span><span style="display:flex;"><span>content <span style="color:#66d9ef">select</span> <span style="color:#ae81ff">16509003</span>
+</span></span><span style="display:flex;"><span>content download
+</span></span></code></pre></div><p>Aby sprawdzić, czy wszystko działa, można spróbować uruchomić serwer z zapisu:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/opt/openttd/openttd -D -g save/main.sav
+</span></span></code></pre></div><h2 id="skrypty">Skrypty</h2>
+<p>W katalogu domowym użytkownika <code>openttd</code> utwórz skrypt <code>launch_openttd.sh</code> i wklej ten kod:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># przejdz do /srv/openttd</span>
+</span></span><span style="display:flex;"><span>cd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>save_dir<span style="color:#f92672">=</span>.local/share/openttd/save
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># jesli main.sav nie istnieje, utworz kopie init.sav</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> -f $save_dir/main.sav <span style="color:#f92672">]]</span> <span style="color:#f92672">||</span> cp -v $save_dir/init.sav $save_dir/save/main.sav
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>recent_autosave<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>ls -t $save_dir/autosave | head -n1<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># jesli istnieje autozapis</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ! <span style="color:#f92672">[[</span> -z $recent_autosave <span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># jesli autozapis jest nowszy od main.sav, to go podmien</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">[[</span> $save_dir/autosave/$recent_autosave -nt $save_dir/main.sav <span style="color:#f92672">]]</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>                <span style="color:#f92672">&amp;&amp;</span> cp -v $save_dir/autosave/$recent_autosave $save_dir/main.sav
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># uruchom serwer</span>
+</span></span><span style="display:flex;"><span>/opt/openttd/openttd -D -g save/main.sav &gt;&gt;server.log
+</span></span></code></pre></div><p>Utwórz jeszcze drugi skrypt <code>restart_game.sh</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>cp -v $save_dir/init.sav $save_dir/save/main.sav
+</span></span></code></pre></div><p>Pierwszy skrypt kopiuje najnowszy autozapis do pliku <code>main.sav</code> i włącza serwer, a drugi usuwa plik <code>main.sav</code>, więc zostanie on utworzony przy starcie serwera.
+Pamiętaj o ustawieniu odpowiednich uprawnień.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod u+x launch_openttd.sh
+</span></span><span style="display:flex;"><span>chmod u+x restart_game.sh
+</span></span></code></pre></div><h2 id="konfiguracja-usługi">Konfiguracja usługi</h2>
+<p>Utwórz plik <code>/etc/systemd/system/openttd.service</code> i wklej zawartość</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">OpenTTD Dedicated Server</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">local-fs.target network.target</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#e6db74">/srv/openttd</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">openttd</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Group</span><span style="color:#f92672">=</span><span style="color:#e6db74">openttd</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/bin/bash /srv/openttd/launch_openttd.sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">simple</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+</span></span></code></pre></div><p>Następnie odśwież systemd</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl daemon-reload
+</span></span></code></pre></div><p>Dzięki temu można zarządzać serwerem używając standardowych komend</p>
+<pre tabindex="0"><code>systemctl start openttd
+systemctl stop openttd
+systemctl enable openttd
+systemctl disable openttd
+systemctl status openttd
+</code></pre><h2 id="porty">Porty</h2>
+<p>OpenTTD korzysta z portów <code>3978</code> i <code>3979</code> (TCP i UDP).</p>
+<h2 id="dołączenie-do-gry">Dołączenie do gry</h2>
+<p>Gdy po połączeniu gra będzie zapauzowana, można ją odpauzować tą komendą: <code>rcon j3b4cp1s unpause</code>.</p>
+
+
+
+<article class="ls">
+    <p class="ls__command">
+        <span class="ls__prompt">[Fern]</span> $ ls Poradniki | head -n5
+    </p>
+
+    
+        <div class="ls__line">
+            <span class="mobile-hide">
+    -rw-rw-r-- 1 fern fern 
+    312 
+    
+    01 lip 2023 
+    
+</span>
+<a href="/pl/poradniki/jak-%C5%BCy%C4%87/">Jak Żyć</a>
+        </div>
+    
+        <div class="ls__line">
+            <span class="mobile-hide">
+    -rw-rw-r-- 1 fern fern 
+    386 
+    
+    30 cze 2023 
+    
+</span>
+<a href="/pl/poradniki/hostowanie-openttd/">Hostowanie OpenTTD</a>
+        </div>
+    
+</article>
+
+
+            </main></div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openttd on Blog Fern.Fun</title>
+    <link>/pl/tag/openttd/</link>
+    <description>Recent content in openttd on Blog Fern.Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-pl</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Fri, 30 Jun 2023 18:29:39 +0200</lastBuildDate><atom:link href="/pl/tag/openttd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hostowanie OpenTTD</title>
+      <link>/pl/poradniki/hostowanie-openttd/</link>
+      <pubDate>Fri, 30 Jun 2023 18:29:39 +0200</pubDate>
+      
+      <guid>/pl/poradniki/hostowanie-openttd/</guid>
+      <description>Instalacja OpenTTD # Jako root, z katalogu /root curl -O https://cdn.openttd.org/openttd-releases/13.0/openttd-13.0-linux-generic-amd64.tar.xz curl -O https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip unzip opengfx-7.1-all.zip cd /opt tar xf /root/openttd-13.0-linux-generic-amd64.tar.xz mv openttd-13.0-linux-generic-amd64 openttd cp /root/opengfx-7.1.tar /opt/openttd/baseset Tworzenie użytkownika OpenTTD przechowuje dodatki, savey itp. w folderze użytkownika, a uruchamianie serwera jako użytkownik root nie jest dobrym pomysłem.
+useradd -m -d /srv/openttd -s /bin/bash openttd Pierwsze uruchomienie Przy pierwszym uruchomieniu OpenTTD wygeneruje foldery ~/.config/openttd i ~/.local/share/openttd
+su openttd /opt/openttd/openttd -D Po uruchomieniu odpaleniu serwera można od razu skonfigurować część ustawień</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jakub Buciuto on Blog Fern.Fun</title>
+    <link>/pl/autor/jakub-buciuto/</link>
+    <description>Recent content in Jakub Buciuto on Blog Fern.Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-pl</language>
+    <copyright>Everything is mine</copyright>
+    <lastBuildDate>Fri, 30 Jun 2023 16:54:51 +0200</lastBuildDate><atom:link href="/pl/autor/jakub-buciuto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O nas</title>
+      <link>/pl/o-nas/</link>
+      <pubDate>Fri, 30 Jun 2023 16:54:51 +0200</pubDate>
+      
+      <guid>/pl/o-nas/</guid>
+      <description>Nasza zespół zajmuje się tworzeniem atrakcyjnych stron internetowych. Jesteśmy grupą deweloperów, którzy tworzą oszałamiające doświadczenia online, które angażują i inspirują. Naszą pasją jest projektowanie i rozwijanie stron internetowych, które nie tylko są estetycznie piękne, ale także funkcjonalne i użytkowe. Stawiamy na nowoczesne rozwiązania, które przyciągają uwagę odwiedzających i pozostawiają na nich trwałe wrażenie. Dążymy do tego, aby nasze strony internetowe były nie tylko wizualnie pociągające, ale również dostosowane do potrzeb naszych klientów i ich odbiorców.</description>
+    </item>
+    
+  </channel>
+</rss>
